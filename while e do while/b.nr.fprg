@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="b.nr"/>
+        <attribute name="authors" value="leona"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-14 10:00:30 "/>
+        <attribute name="created" value="bGVvbmE7TkItTEVPOzIwMjQtMTEtMTQ7IjA5OjUyOjA5ICI7MjEzNQ=="/>
+        <attribute name="edited" value="bGVvbmE7TkItTEVPOzIwMjQtMTEtMTQ7IjEwOjAwOjMwICI7MTsyMjIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2" type="Integer" array="False" size=""/>
+            <declare name="max, min" type="Integer" array="False" size=""/>
+            <output expression="&quot;dammi num1 e num2&quot;" newline="True"/>
+            <input variable="num1"/>
+            <input variable="num2"/>
+            <if expression="num1&lt;num2">
+                <then>
+                    <assign variable="min" expression="num1"/>
+                    <assign variable="max" expression="num2"/>
+                </then>
+                <else>
+                    <assign variable="max" expression="num1"/>
+                    <assign variable="min" expression="num2"/>
+                </else>
+            </if>
+            <while expression="min &lt;= max">
+                <output expression="min" newline="True"/>
+                <assign variable="min" expression="min+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

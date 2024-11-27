@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="a_media"/>
+        <attribute name="authors" value="leona"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-11-14 10:07:27 "/>
+        <attribute name="created" value="bGVvbmE7TkItTEVPOzIwMjQtMTEtMTQ7IjEwOjAwOjQ1ICI7MjEyMA=="/>
+        <attribute name="edited" value="bGVvbmE7TkItTEVPOzIwMjQtMTEtMTQ7IjEwOjA3OjI3ICI7MTsyMjM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, volte, sommanum" type="Integer" array="False" size=""/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="numero" expression="0"/>
+            <assign variable="volte" expression="-1"/>
+            <assign variable="sommanum" expression="0"/>
+            <do expression="numero != 0">
+                <output expression="&quot;inserisci un nr&quot;" newline="True"/>
+                <input variable="numero"/>
+                <assign variable="sommanum" expression="sommanum + numero"/>
+                <assign variable="volte" expression="volte +1"/>
+            </do>
+            <assign variable="media" expression="sommanum /volte"/>
+            <output expression="&quot;la somma e'&quot;" newline="True"/>
+            <output expression="sommanum" newline="True"/>
+            <output expression="&quot;la media e'&quot;" newline="True"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
