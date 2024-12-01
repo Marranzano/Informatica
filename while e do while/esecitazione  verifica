@@ -1,1 +1,14 @@
+// scrivi un programma che stampa i nr da 1 a un numero digitato a tastiera
+#include <stdio.h>
+int main()
+{
+int num;
+do 
+printf("dammi il numero finale");
+scanf("%d",&num);
 
+
+
+
+
+}
