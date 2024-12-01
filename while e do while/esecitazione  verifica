@@ -2,13 +2,14 @@
 #include <stdio.h>
 int main()
 {
-int num;
-do 
-printf("dammi il numero finale");
+int num,min;
+min=1
+printf("dammi il nr finale");
 scanf("%d",&num);
-
-
-
-
-
+while(min<=num)
+{
+printf("%d",min);
+min++
+}
+return 0;
 }
