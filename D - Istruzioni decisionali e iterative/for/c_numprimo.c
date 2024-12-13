@@ -12,13 +12,15 @@
 int main()
 {
 int num, divisore,cont;
+cont=0;
 printf("dammi un numero ");
 scanf("%d",&num);
 for(divisore=1; num>=divisore; divisore++)
 {
 	{ if(num % divisore==0)
-	{printf("%d \n",divisore); } //stampa i divisori
+	{printf("%d \n",divisore);  //stampa i divisori
     cont ++;
+	}
 	}
 }
 if(cont==2)
