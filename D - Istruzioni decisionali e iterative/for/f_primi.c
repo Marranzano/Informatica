@@ -1,11 +1,11 @@
 #include <stdio.h>
-#define N 100
+#define Nrprimi 100
 
 int main()
 {
     int num, i, num_primo;
     
-    for(num = 2; num <= N; num++)  // Iniziamo da 2, poiché 1 non è considerato un numero primo
+    for(num = 2; num <= Nrprimi; num++)  // Iniziamo da 2, poiché 1 non è considerato un numero primo
     {
         num_primo = 1;  // Supponiamo che il numero sia primo
         
@@ -17,7 +17,7 @@ int main()
             }
         }
         
-        if(num_prim)  // Se il numero è primo
+        if(num_primo)  // Se il numero è primo
         {
             printf("%d \n", num);
         }
