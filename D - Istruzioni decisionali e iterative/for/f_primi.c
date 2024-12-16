@@ -1,23 +1,21 @@
 #include <stdio.h>
 #define Nrprimi 100
-
 int main()
 {
-    int num, i, num_primo;
-    
-    for(num = 2; num <= Nrprimi; num++)  // Iniziamo da 2, poiché 1 non è considerato un numero primo
+    int num, div, num_primo;
+    for(num = 2; num <= Nrprimi; num++) 
     {
-        num_primo = 1;  // Supponiamo che il numero sia primo
+        num_primo = 1;  
         
-        for(i = 2; i * i <= num; i++)  // Verifica divisori fino alla radice quadrata di num
+        for(div = 2; div * div <= num; div++) 
         {
-            if(num % i == 0)  // Se il numero è divisibile per i, non è primo
+            if(num % div == 0)  
             {
-                num_primo = 0;  // Non è primo
+                num_primo = 0; 
             }
         }
         
-        if(num_primo)  // Se il numero è primo
+        if(num_primo)  
         {
             printf("%d \n", num);
         }
