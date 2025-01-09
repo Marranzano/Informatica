@@ -3,25 +3,42 @@ e chiedere all'utente di inserire una voce del menu fino a quando non sceglie 0=
 In caso di uscita prima di terminare il ciclo del menu visualizzare un saluto
 Stampare a schermo la scelta effettuata dall’utente. */
 #include <stdio.h>
+
 int main() {
     int scelta;
 
     do {
-        // Visualizzazione del menu con colori 
-        printf("\033[31mMenu:\n");      // Colore rosso per il menu, nero per il testo
-        printf("\033[30m1. Opzione 1\n");  
-        printf("\033[30m2. Opzione 2\n");  
-        printf("\033[30m3. Opzione 3\n");  
-        printf("\033[30m0. Uscita\n");  
-        
-        // Chiedere all'utente di inserire una scelta
-        printf("\033[31mInserisci la tua scelta: \033[30m");  
+        // Visualizzazione del menu
+        printf("\nMenu:\n");
+        printf("1. Opzione 1\n");
+        printf("2. Opzione 2\n");
+        printf("3. Opzione 3\n");
+        printf("0. Uscita\n");
+        printf("Inserisci la tua scelta: ");
+
+        // Lettura della scelta dell'utente
         scanf("%d", &scelta);
-        // Stampare la scelta effettuata
-        if (scelta != 0) {
-            printf("\033[31mHai scelto l'opzione %d\n", scelta);  
+
+        // Gestione delle opzioni
+        switch (scelta) {
+            case 1:
+                printf("Hai scelto Opzione 1.\n");
+                break;
+            case 2:
+                printf("Hai scelto Opzione 2.\n");
+                break;
+            case 3:
+                printf("Hai scelto Opzione 3.\n");
+                break;
+            case 0:
+                printf("Uscita selezionata. Arrivederci!\n");
+                break;
+            default:
+                printf("Scelta non valida. Riprova.\n");
+                break;
         }
-    } while (scelta != 0); // 
-    printf("\033[31mArrivederci!\n");  
+
+    } while (scelta != 0);
+
     return 0;
 }
