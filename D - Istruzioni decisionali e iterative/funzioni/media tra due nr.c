@@ -1,3 +1,4 @@
+//media tra due nr uno scelto da un'utente e uno scelto dal computer e la media tra due costanti
 #include <stdio.h>
 #define c 8
 #define d 6
