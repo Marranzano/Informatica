@@ -6,17 +6,9 @@ int calcolaMCD(int x, int y);
 int main() 
 {
     int num1, num2;
-
-    // Input dall'utente
     printf("Inserisci due numeri interi per calcolare il MCD: ");
     scanf("%d %d", &num1, &num2);
-
-    // Calcolo del MCD
     int mcd = calcolaMCD(num1, num2);
-
-    // Output del risultato
-    printf("Il MCD di %d e %d è: %d\n", num1, num2, mcd);
-
     return 0;
 }
 
@@ -28,5 +20,7 @@ int calcolaMCD(int x, int y)
         x = y;
         y = resto;
     }
+    // Output del risultato
+    printf("Il MCD e' %d",x);
     return x;
 }
