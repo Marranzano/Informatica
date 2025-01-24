@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 // Prototipi delle funzioni
-float area_rettangolo(float x, float y);
-int mcd(int a, int b);
-int somma_divisori(int numero);
+int arearettangolo(int x, int y);
+int calcolaMCD(int x, int y);
+int somma_divisori(int x);
 void menu();
 
 // Funzione principale
@@ -13,29 +13,39 @@ int main() {
 }
 
 // Definizione della funzione per calcolare l'area del rettangolo
-float area_rettangolo(float base, float altezza) {
-    return base * altezza;
-}
+int arearettangolo(int x, int y)
+{
+    int m;
+    m= x*y;
+    printf("L'area del rettangolo è: %d \n", m);
+    return m;
 
-// Definizione della funzione per calcolare il MCD (algoritmo di Euclide)
-int mcd(int a, int b) {
-    while (b != 0) {
-        int resto = a % b;
-        a = b;
-        b = resto;
-    }
-    return a;
 }
+// Definizione della funzione per calcolare il MCD (algoritmo di Euclide)
+int calcolaMCD(int x, int y)
+
+{   while (y != 0) {
+        int resto = x % y;
+        x = y;
+        y = resto;
+        printf("Il massimo comune divisore è: %d\n",  y); 
+        } 
+} 
+    
 
 // Definizione della funzione per calcolare la somma dei divisori
-int somma_divisori(int numero) {
-    int somma = 0;
-    for (int i = 1; i <= numero; i++) {
-        if (numero % i == 0) {
-            somma += i;
+int somma_divisori(int x) {
+    int m = 0; // Inizializzo la variabile m a 0
+
+    // Ciclo per trovare i divisori
+    for (int cont = 1; cont <= x; cont++) {
+        if (x % cont == 0) {
+            m = m + cont; // Aggiungo il divisore alla somma
         }
     }
-    return somma;
+
+    printf("La somma dei divisori e' %d\n", m); // Stampa della somma
+    return m; // Restituisco la somma
 }
 
 // Definizione della funzione menu
@@ -53,13 +63,12 @@ void menu() {
 
         switch (scelta) {
             case 1: {
-                float base, altezza;
-                printf("Inserisci la base del rettangolo: ");
-                scanf("%f", &base);
-                printf("Inserisci l'altezza del rettangolo: ");
-                scanf("%f", &altezza);
-                float area = area_rettangolo(base, altezza);
-                printf("L'area del rettangolo è: %.2f\n", area);
+                int base, altezza;
+                printf("Inserisci la base: ");
+                scanf("%d", &base);
+                printf("Inserisci l'altezza: ");
+                scanf("%d", &altezza);
+                int area = arearettangolo(base, altezza);
                 break;
             }
             case 2: {
@@ -68,8 +77,7 @@ void menu() {
                 scanf("%d", &num1);
                 printf("Inserisci il secondo numero: ");
                 scanf("%d", &num2);
-                int risultato = mcd(num1, num2);
-                printf("Il massimo comune divisore di %d e %d è: %d\n", num1, num2, risultato);
+                int risultato = calcolaMCD(num1, num2);
                 break;
             }
             case 3: {
@@ -77,7 +85,6 @@ void menu() {
                 printf("Inserisci un numero: ");
                 scanf("%d", &numero);
                 int somma = somma_divisori(numero);
-                printf("La somma dei divisori di %d è: %d\n", numero, somma);
                 break;
             }
             case 0:
