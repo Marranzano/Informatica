@@ -12,7 +12,7 @@ int arearettangolo(int x, int y)
 {
     int m;
     m= x*y;
-    printf("%d",m);
+    printf("%d \n",m);
     return m;
 
 }

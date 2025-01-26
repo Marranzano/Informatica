@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-// Prototipi delle funzioni
 int arearettangolo(int x, int y);
 int calcolaMCD(int x, int y);
 int somma_divisori(int x);
 void menu();
 
-// Funzione principale
+
 int main() {
-    menu(); // Avvia il menu
+    menu(); 
     return 0;
 }
 
@@ -88,7 +87,7 @@ void menu() {
                 break;
             }
             case 0:
-                printf("Uscita dal programma. Arrivederci!\n");
+                printf("Uscita dal programma.\n");
                 break;
             default:
                 printf("Opzione non valida. Riprova.\n");
