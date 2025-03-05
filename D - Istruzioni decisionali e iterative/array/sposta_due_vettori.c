@@ -22,7 +22,7 @@ void carica_array(int v[])
 }
 void sposta(int v[N], int v2[N])
 {
-    for(int i=0, j=N-1;i<N;i++,j--)
+    for(int i=0, int j=N-1;i<N;i++,j--)
     {
         v[i]=v2[j];
     }
