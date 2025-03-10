@@ -1,3 +1,8 @@
+/* Inizializzazione e Visualizzazione
+Dichiari un array di 10 interi
+Inizializzi l'array con i primi 10 numeri naturali (1-10)
+Visualizzi il contenuto dell'array */
+
 #include <stdio.h>
 
 int main(){

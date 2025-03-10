@@ -1,3 +1,9 @@
+/*Inizializzazione da Input e Somma
+Dichiari un array di 10 float
+Chieda all'utente di inserire i valori nell'array
+Calcoli e visualizzi la somma di tutti gli elementi
+Calcoli e visualizzi la media aritmetica degli elementi */
+
 #include <stdio.h>
 float array[10];
 int main(){
