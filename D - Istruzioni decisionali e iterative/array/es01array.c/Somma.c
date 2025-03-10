@@ -10,6 +10,6 @@ for (int i= 0; i <10; i++)
  somma+=array[i];
  media=somma/10.0;
 }
-printf("la media e' %f e la somma e' %f",media,somma);
+printf("la media e' %.2f e la somma e' %.2f",media,somma);
 return 0;
 }
