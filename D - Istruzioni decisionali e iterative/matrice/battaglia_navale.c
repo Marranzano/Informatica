@@ -39,15 +39,28 @@ void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE]);
  * @return int Codice di uscita del programma
  */
 int main() {
-    // Implementare il main
+    char campo[DIMENSIONE][DIMENSIONE];
+    inizializzaCampo (campo);
+    visualizzaCampo (campo);
 }
 
 /* Implementazione delle funzioni */
 void inizializzaCampo(char campo[DIMENSIONE][DIMENSIONE]) 
-    { for(int i=0; i<DIMENSIONE;i++)
+    {
+        char c= '~';
+        for(int i=0; i<DIMENSIONE;i++)
         { for(int j=0; j<DIMENSIONE;j++)
-            { campo[i][j]= '~' ; }
+            { campo[i][j]= c ; }
          } }
 
 void visualizzaCampo(char campo[DIMENSIONE][DIMENSIONE])
-{}
+{               
+            for(int i=0; i<DIMENSIONE; i++)
+            {
+                for(int j=0; j<DIMENSIONE; j++)
+                {
+                        printf("%c", campo[i][j]);
+                }
+                printf("\n");
+            }
+}
